@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Package — Azerbaijan Travel Packages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script src="image-slot.js"></script>
+</head>
+<body data-page="packages">
+
+<!-- page hero -->
+<section class="page-hero">
+  <svg class="hero-bg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1240 400"><rect width="1240" height="400" fill="url(#butaPat)"/></svg>
+  <div class="wrap">
+    <div class="crumb">
+      <a href="Azerbaijan Travel Packages — Homepage.html">Home</a><span class="sep">›</span>
+      <a href="Tour Packages.html">Tour Packages</a><span class="sep">›</span>
+      <span id="crumbTitle">Package</span>
+    </div>
+    <div class="ph-eyebrow" id="dCat">Package</div>
+    <h1 id="dTitle">—</h1>
+    <p class="ph-sub" id="dTagline">—</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="detail-wrap">
+    <!-- main -->
+    <div>
+      <div class="gallery" id="gallery"></div>
+
+      <div class="d-meta-row" id="dMeta"></div>
+
+      <div class="d-section">
+        <h2>Overview</h2>
+        <p class="d-lead" id="dOverview">—</p>
+      </div>
+
+      <div class="d-section">
+        <h2>Highlights</h2>
+        <div class="highlight-grid" id="dHighlights"></div>
+      </div>
+
+      <div class="d-section">
+        <h2>Day-by-day itinerary</h2>
+        <div class="timeline" id="dItinerary"></div>
+      </div>
+
+      <div class="d-section">
+        <h2>What’s included</h2>
+        <div class="incl-grid">
+          <div class="incl-col">
+            <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E3B3C" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg> Included</h3>
+            <ul id="dIncl"></ul>
+          </div>
+          <div class="incl-col">
+            <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B5392E" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg> Not included</h3>
+            <ul id="dExcl"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-section">
+        <h2>Frequently asked</h2>
+        <div id="dFaq"></div>
+      </div>
+    </div>
+
+    <!-- sticky sidebar -->
+    <aside>
+      <div class="book-card">
+        <div class="book-head">
+          <div class="bk-from">Starting from</div>
+          <div class="bk-price"><b id="bkPrice">—</b></div>
+          <div class="bk-per" id="bkPer">per person</div>
+        </div>
+        <div class="book-body">
+          <div class="bk-row"><span>Duration</span><span id="bkDur">—</span></div>
+          <div class="bk-row"><span>Group size</span><span id="bkGroup">—</span></div>
+          <div class="bk-row"><span>Rating</span><span id="bkRating">—</span></div>
+          <div class="bk-row"><span>Style</span><span id="bkCat">—</span></div>
+          <a class="btn btn-primary btn-lg" id="bkInquire" href="Contact.html">Get a free quote</a>
+          <a class="btn btn-wa btn-lg" id="bkWa" href="https://wa.me/9940000000">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#073b25"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <div class="bk-assure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg> Free, no-obligation custom quote</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- related -->
+  <section class="related">
+    <h2>You might also like</h2>
+    <div class="pkg-grid" id="related"></div>
+  </section>
+</div>
+
+<div style="height:90px"></div>
+
+<script src="data.js"></script>
+<script src="chrome.js"></script>
+<script src="detail.js"></script>
+</body>
+</html>

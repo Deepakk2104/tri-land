@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logo Lab</title>
+<style>
+  body{margin:0;background:#FBF7EF;font-family:sans-serif;display:flex;flex-wrap:wrap;gap:30px;padding:40px;}
+  .cell{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .cell svg{display:block;}
+  .dark{background:#0E3B3C;padding:20px;border-radius:16px;}
+  .lab{outline:1px solid #ccc;}
+  small{font-family:monospace;color:#666;}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="flameGrad" x1="0.15" y1="1" x2="0.85" y2="0">
+      <stop offset="0" stop-color="#C2392A"/>
+      <stop offset="0.45" stop-color="#E2613C"/>
+      <stop offset="1" stop-color="#F0B53C"/>
+    </linearGradient>
+    <symbol id="flame" viewBox="0 0 100 120">
+      <path class="fOuter" d="M50,116
+        C28,116 14,100 14,76
+        C14,58 26,52 33,39
+        C40,26 41,12 58,5
+        C53,21 62,28 67,43
+        C73,60 86,60 86,80
+        C86,102 70,116 50,116 Z"/>
+      <path class="fInner" d="M49,99
+        C39,99 33,91 33,81
+        C33,72 40,68 45,58
+        C49,66 56,71 59,80
+        C61,90 57,99 49,99 Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<style>
+  .fOuter{fill:var(--fo, url(#flameGrad));}
+  .fInner{fill:var(--fi, #FBF7EF);}
+  .mark{width:120px;height:144px;}
+  .mono-dark{--fo:#0E3B3C;--fi:transparent;}
+  .mono-ember{--fo:#E2613C;--fi:transparent;}
+  .on-dark{--fi:#0E3B3C;}
+  .light{--fo:#FBF7EF;--fi:#0E3B3C;}
+</style>
+
+<div class="cell lab">
+  <svg class="mark"><use href="#flame"/></svg>
+  <small>color / cream inner</small>
+</div>
+<div class="cell lab">
+  <svg class="mark mono-dark"><use href="#flame"/></svg>
+  <small>mono teal</small>
+</div>
+<div class="cell lab">
+  <svg class="mark mono-ember"><use href="#flame"/></svg>
+  <small>mono ember</small>
+</div>
+<div class="cell dark">
+  <svg class="mark on-dark"><use href="#flame"/></svg>
+  <small style="color:#fff">color on dark</small>
+</div>
+<div class="cell dark">
+  <svg class="mark light"><use href="#flame"/></svg>
+  <small style="color:#fff">reversed</small>
+</div>
+</body>
+</html>

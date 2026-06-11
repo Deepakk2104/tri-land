@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azerbaijan Travel Packages — Tours, Visa Help &amp; Honeymoons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script src="image-slot.js"></script>
+</head>
+<body>
+
+<!-- ===== shared svg defs ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="flameGrad" x1="0.15" y1="1" x2="0.85" y2="0">
+      <stop offset="0" stop-color="#C2392A"/><stop offset="0.45" stop-color="#E2613C"/><stop offset="1" stop-color="#F0B53C"/>
+    </linearGradient>
+    <symbol id="flame" viewBox="0 0 100 120">
+      <path class="fOuter" d="M50,116 C28,116 14,100 14,76 C14,58 26,52 33,39 C40,26 41,12 58,5 C53,21 62,28 67,43 C73,60 86,60 86,80 C86,102 70,116 50,116 Z"/>
+      <path class="fInner" d="M49,99 C39,99 33,91 33,81 C33,72 40,68 45,58 C49,66 56,71 59,80 C61,90 57,99 49,99 Z"/>
+    </symbol>
+    <pattern id="butaPat" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M52,84 C38,84 30,73 30,58 C30,47 38,43 43,33 C48,23 49,14 60,9 C56,20 64,25 67,35 C71,47 80,48 80,60 C80,75 68,84 56,84 Z" fill="none" stroke="rgba(240,181,60,0.22)" stroke-width="1.4"/>
+      <circle cx="55" cy="60" r="3" fill="rgba(226,97,60,0.4)"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- ===== utility bar ===== -->
+<div class="utility">
+  <div class="wrap">
+    <div class="u-left">
+      <span><span class="dot">●</span> We reply to every inquiry within 2 hours</span>
+      <span>Visa-on-arrival for 95+ countries</span>
+    </div>
+    <div class="u-right">
+      <a href="tel:+9940000000">+994 00 000 00 00</a>
+      <span>·</span>
+      <a href="#">9AM–9PM IST / GST</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== header ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="brand">
+      <svg class="bmk"><use href="#flame"/></svg>
+      <span><span class="nm">Azerbaijan</span><br><span class="ds">Travel Packages</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="Tour Packages.html">Packages</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#honeymoon">Honeymoon</a>
+      <a href="#visa">Visa Help</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+9940000000" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      </a>
+      <a href="#" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#073b25"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg>
+        WhatsApp Us
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="scrim" id="scrim"></div>
+<aside class="mobile-menu" id="mobileMenu">
+  <div class="mm-head">
+    <span class="brand"><svg class="bmk"><use href="#flame"/></svg></span>
+    <button class="hamburger open" id="mmClose" aria-label="Close"><span></span><span></span><span></span></button>
+  </div>
+  <a href="Tour Packages.html" class="ml">Packages</a>
+  <a href="#destinations" class="ml">Destinations</a>
+  <a href="#honeymoon" class="ml">Honeymoon</a>
+  <a href="#visa" class="ml">Visa Help</a>
+  <a href="Contact.html" class="ml">Contact</a>
+  <a href="Contact.html" class="btn btn-primary btn-lg">Get Free Quote</a>
+</aside>
+
+<!-- ===== hero ===== -->
+<section class="hero">
+  <svg class="hero-bg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1240 700"><rect width="1240" height="700" fill="url(#butaPat)"/></svg>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="hero-eyebrow"><span class="ln"></span>Azerbaijan · Land of Fire</span>
+      <h1>Explore Azerbaijan,<br>from <span class="fire">$349</span>.</h1>
+      <p class="sub">Curated tours, honeymoon escapes, ski trips and halal-friendly itineraries — with real visa guidance and 24/7 WhatsApp support.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Get Free Quote</a>
+        <a href="#" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg>
+          WhatsApp Us Now
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span class="av">
+          <span style="background:#C2392A">SK</span><span style="background:#E2613C">AM</span><span style="background:#F0B53C;color:#3a2a00">RP</span>
+        </span>
+        <span><span class="stars">★★★★★</span> 4.8 from 500+ travellers</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="float-flame"><use href="#flame"/></svg>
+      <div class="hero-photo">
+        <image-slot id="hero-photo" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="Drop a Baku skyline / Flame Towers photo"></image-slot>
+      </div>
+      <div class="float-card float-price">
+        <div>
+          <div class="lbl">Weekend Baku Escape</div>
+          <div class="val">from <b>$349</b></div>
+        </div>
+      </div>
+      <div class="float-card float-rating">
+        <span class="stars">★★★★★</span>
+        <span class="txt">Verified operators</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== trust strip ===== -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">
+      <div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0E3B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+      <div><div class="big">500+</div><div class="lbl">Travellers sent</div></div>
+    </div>
+    <div class="trust-item">
+      <div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0E3B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
+      <div><div class="big">Verified</div><div class="lbl">Ground operators</div></div>
+    </div>
+    <div class="trust-item">
+      <div class="ti-ic"><svg viewBox="0 0 24 24" fill="#F0B53C" stroke="#F0B53C" stroke-width="1"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.8 5.9 20.8 7 14 2 9.2l6.9-.9z"/></svg></div>
+      <div><div class="big">4.8★</div><div class="lbl">Average rating</div></div>
+    </div>
+    <div class="trust-item">
+      <div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0E3B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.9-.9L3 20l1.1-5a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.4-8.5 8.5 8.5 0 0 1 9.4 8.8z"/></svg></div>
+      <div><div class="big">24/7</div><div class="lbl">WhatsApp support</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== packages ===== -->
+<section class="block" id="packages">
+  <div class="wrap">
+    <div class="block-head reveal">
+      <div>
+        <p class="eyebrow">Curated Packages</p>
+        <h2 class="sec">Trips built to be booked</h2>
+      </div>
+      <p class="sec-lead">Transparent “starting from” pricing, day-by-day itineraries, and verified operators on every package.</p>
+    </div>
+    <div class="filters reveal" id="filters"></div>
+    <div class="pkg-grid" id="pkgGrid"></div>
+    <div style="display:flex;justify-content:center;margin-top:40px">
+      <a href="Tour Packages.html" class="btn btn-ink btn-lg">View all packages &amp; details</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== why us ===== -->
+<section class="block why" id="why">
+  <div class="wrap">
+    <div class="block-head reveal">
+      <div>
+        <p class="eyebrow">Why Choose Us</p>
+        <h2 class="sec">The trusted, English-first way in</h2>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
+        <h3>Verified Operators</h3>
+        <p>Every partner is licensed, 4.3★+ rated, and bound by quality &amp; refund standards before we list them.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Reply in 2 Hours</h3>
+        <p>Real humans on WhatsApp, 9AM–9PM IST/GST. A custom quote — not a generic PDF — within hours.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></div>
+        <h3>Visa Guidance</h3>
+        <p>Step-by-step documentation support for your e-Visa or visa-on-arrival, with clear, honest expectations.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h3>Local, On the Ground</h3>
+        <p>English-speaking guides, private transport, and a 24/7 emergency contact in Azerbaijan throughout your trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== destinations ===== -->
+<section class="block" id="destinations">
+  <div class="wrap">
+    <div class="block-head reveal">
+      <div>
+        <p class="eyebrow">Where You'll Go</p>
+        <h2 class="sec">From the Caspian to the Caucasus</h2>
+      </div>
+      <p class="sec-lead">Cosmopolitan Baku, alpine Gabala &amp; Shahdag, the silk town of Sheki, and the ancient fire of Gobustan.</p>
+    </div>
+    <div class="dest-grid" id="destGrid"></div>
+  </div>
+</section>
+
+<!-- ===== feature banners ===== -->
+<section class="block" id="honeymoon" style="padding-top:0">
+  <div class="wrap">
+    <div class="features">
+      <div class="feature honeymoon reveal">
+        <image-slot id="feat-honeymoon" shape="rect" fit="cover" placeholder="Drop a romantic Baku seafront photo"></image-slot>
+        <div class="fov"></div>
+        <div class="fc">
+          <div class="fk">Honeymoon</div>
+          <h3>A honeymoon no one<br>else has done</h3>
+          <p>Caspian seafronts, rooftop dinners, cable cars and mountain backdrops — romantic, unique, and refreshingly uncrowded. From $1,299/couple.</p>
+          <a href="#contact" class="btn btn-white">Plan our honeymoon</a>
+        </div>
+      </div>
+      <div class="feature halal reveal" id="halal">
+        <image-slot id="feat-halal" shape="rect" fit="cover" placeholder="Drop a halal dining / family photo"></image-slot>
+        <div class="fov"></div>
+        <div class="fc">
+          <div class="fk">Halal-Friendly</div>
+          <h3>Halal travel,<br>done properly</h3>
+          <p>Confirmed halal dining, prayer-friendly itineraries, and family-safe stays — built by people who understand the requirements. From $849/person.</p>
+          <a href="#contact" class="btn btn-white">See halal packages</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== testimonials ===== -->
+<section class="block testi" id="testimonials">
+  <div class="wrap">
+    <div class="block-head reveal">
+      <div>
+        <p class="eyebrow" style="color:var(--saffron)">Traveller Stories</p>
+        <h2 class="sec">Trusted by travellers worldwide</h2>
+      </div>
+      <p class="sec-lead">Real words from families, couples and groups we've sent to the Land of Fire.</p>
+    </div>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ===== visa banner ===== -->
+<section class="block visa" id="visa">
+  <div class="wrap">
+    <div class="inner reveal">
+      <svg class="vbg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 300"><rect width="1200" height="300" fill="url(#butaPat)"/></svg>
+      <div class="vtxt">
+        <div class="vk">Visa Made Simple</div>
+        <h3>Visa-on-arrival for 95+ countries,<br>including India.</h3>
+        <p class="vsub">Not sure where to start? Our guidance service walks you through the e-Visa, step by step, for $25–$45 per applicant.</p>
+      </div>
+      <div class="vcta"><a href="#contact" class="btn btn-white btn-lg">Check your visa</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== inquiry form ===== -->
+<section class="block inquiry" id="contact">
+  <div class="wrap">
+    <div class="iq-grid">
+      <div class="iq-left reveal">
+        <p class="eyebrow">Get a Free Quote</p>
+        <h2>Tell us your dates.<br>We'll build the trip.</h2>
+        <p>Share a few details and we'll send a personalised itinerary and quote straight to your WhatsApp — usually within 2 hours.</p>
+        <div class="iq-points">
+          <div class="iq-point"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span> Free, no-obligation custom itinerary</div>
+          <div class="iq-point"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span> Transparent, all-inclusive pricing</div>
+          <div class="iq-point"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span> Visa guidance included</div>
+        </div>
+      </div>
+      <div class="form-card reveal">
+        <form id="inquiryForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label>Full name <span class="req">*</span></label>
+              <input type="text" name="name" placeholder="Your name">
+              <span class="err">Please enter your name</span>
+            </div>
+            <div class="field">
+              <label>WhatsApp number <span class="req">*</span></label>
+              <input type="tel" name="phone" placeholder="+91 / +971 …">
+              <span class="err">Please enter a valid number</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Travel month</label>
+              <select name="month">
+                <option value="">Select…</option>
+                <option>Flexible / not sure</option>
+                <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option>
+                <option>May</option><option>Jun</option><option>Jul</option><option>Aug</option>
+                <option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Travellers</label>
+              <select name="pax">
+                <option value="">Select…</option>
+                <option>Solo</option><option>Couple</option><option>3–4 people</option>
+                <option>5–6 people</option><option>7–8 people</option><option>Group of 9+</option>
+              </select>
+            </div>
+          </div>
+          <div class="field full" style="margin-bottom:16px">
+            <label>Which package interests you?</label>
+            <select name="package" id="formPackage"><option value="">Any / help me choose</option></select>
+          </div>
+          <div class="field full" style="margin-bottom:18px">
+            <label>Anything else?</label>
+            <textarea name="message" placeholder="Honeymoon, halal needs, kids' ages, must-sees…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Send my free quote request</button>
+          <p class="form-note">By submitting you agree to be contacted about your trip. We never share your details.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></div>
+          <h3>Request received</h3>
+          <p>Thank you — we'll message you on WhatsApp within 2 hours with a personalised Azerbaijan itinerary.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="brand"><svg class="bmk"><use href="#flame" class="on-dark"/></svg><span><span class="nm">Azerbaijan</span><br><span class="ds">Travel Packages</span></span></a>
+        <p class="foot-about">Your trusted, English-first gateway to the Land of Fire. Curated tours, visa guidance and 24/7 WhatsApp support.</p>
+        <div class="foot-soc">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#FBF7EF" stroke="none"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#FBF7EF"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EF" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#FBF7EF"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Packages</h4>
+        <ul>
+          <li><a href="#packages">Weekend Baku Escape</a></li>
+          <li><a href="#packages">Complete Azerbaijan Tour</a></li>
+          <li><a href="#honeymoon">Honeymoon Packages</a></li>
+          <li><a href="#halal">Halal Tours</a></li>
+          <li><a href="#packages">Ski &amp; Snow — Shahdag</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#visa">Visa Help</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <h4>Talk to us</h4>
+        <a href="https://wa.me/" style="color:var(--saffron);font-weight:700">WhatsApp: +994 00 000 00 00</a>
+        <span class="lab">Email</span>
+        hello@azerbaijantravelpackages.com
+        <span class="lab">Hours</span>
+        9AM – 9PM IST / GST, daily
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Azerbaijan Travel Packages. All rights reserved.</span>
+      <div class="pay-badges">
+        <span class="pay-badge">SSL Secure</span>
+        <span class="pay-badge">Stripe</span>
+        <span class="pay-badge">Razorpay</span>
+        <span class="pay-badge">Visa · MC</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- floating WA + mobile cta -->
+<a href="#" class="fab-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#073b25"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg></a>
+<div class="mobile-cta">
+  <a href="tel:+9940000000" class="btn btn-call">Call</a>
+  <a href="#" class="btn btn-wa">WhatsApp</a>
+  <a href="#contact" class="btn btn-primary">Get Quote</a>
+</div>
+
+<script src="site.js"></script>
+</body>
+</html>

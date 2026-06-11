@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azerbaijan Travel Packages — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  :root{
+    --teal:#0E3B3C;
+    --teal-deep:#072829;
+    --teal-soft:#16514F;
+    --ember:#E2613C;
+    --saffron:#F0B53C;
+    --carpet:#B5392E;
+    --sand:#F4ECDD;
+    --cream:#FBF7EF;
+    --ink:#221E1A;
+    --ink-60:rgba(34,30,26,.62);
+    --ink-40:rgba(34,30,26,.40);
+    --line:rgba(34,30,26,.14);
+    --line-light:rgba(251,247,239,.18);
+    --display:'Marcellus', serif;
+    --sans:'Hanken Grotesk', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:var(--sans);font-weight:400;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 48px;}
+  section{padding:120px 0;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ember);margin:0 0 22px;
+  }
+  .eyebrow .num{color:var(--ink-40);margin-right:14px;}
+  h2.sec{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.05;margin:0 0 26px;letter-spacing:-.01em;}
+  .lead{font-size:20px;line-height:1.65;color:var(--ink-60);max-width:680px;margin:0;}
+  /* ---------- flame mark defs ---------- */
+  .fOuter{fill:var(--fo, url(#flameGrad));}
+  .fInner{fill:var(--fi, var(--cream));}
+  .mono-teal{--fo:var(--teal);--fi:transparent;}
+  .mono-ember{--fo:var(--ember);--fi:transparent;}
+  .mono-ink{--fo:var(--ink);--fi:transparent;}
+  .on-dark{--fi:var(--teal);}
+  .reversed{--fo:var(--cream);--fi:var(--teal);}
+  .light-cream{--fo:var(--sand);--fi:var(--teal);}
+
+  /* =========== COVER =========== */
+  .cover{
+    background:var(--teal);color:var(--cream);border-bottom:none;
+    min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;
+    padding:46px 0 64px;position:relative;overflow:hidden;
+  }
+  .cover-bg{position:absolute;inset:0;pointer-events:none;opacity:.5;}
+  .cover-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;}
+  .cover-top .tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(251,247,239,.6);}
+  .cover-mid{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;justify-content:center;gap:30px;}
+  .cover-mark{width:140px;height:168px;filter:drop-shadow(0 18px 50px rgba(226,97,60,.35));}
+  .cover h1{
+    font-family:var(--display);font-weight:400;font-size:clamp(40px,7vw,92px);
+    line-height:.98;margin:0;letter-spacing:-.015em;
+  }
+  .cover .sub{font-size:clamp(15px,1.6vw,19px);letter-spacing:.06em;color:rgba(251,247,239,.72);max-width:540px;margin:6px auto 0;}
+  .cover-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(251,247,239,.55);}
+  .cover-bottom .big{font-family:var(--display);font-size:18px;letter-spacing:.02em;text-transform:none;color:var(--cream);}
+
+  /* =========== ESSENCE =========== */
+  .essence-statement{font-family:var(--display);font-size:clamp(26px,3.2vw,42px);line-height:1.25;letter-spacing:-.01em;max-width:920px;margin:0 0 70px;}
+  .essence-statement em{font-style:italic;color:var(--ember);}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+  .pillar{border-top:2px solid var(--ink);padding-top:24px;}
+  .pillar .pn{font-family:var(--display);font-size:15px;color:var(--ink-40);margin-bottom:14px;}
+  .pillar h3{font-family:var(--display);font-weight:400;font-size:24px;margin:0 0 12px;}
+  .pillar p{margin:0;font-size:15.5px;color:var(--ink-60);}
+
+  /* =========== LOGO EXPLORATION =========== */
+  .explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:14px;}
+  .explore-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;}
+  .explore-art{height:260px;display:flex;align-items:center;justify-content:center;background:var(--sand);}
+  .explore-art.dark{background:var(--teal);}
+  .explore-meta{padding:24px 26px 28px;border-top:1px solid var(--line);}
+  .explore-meta .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);font-weight:700;}
+  .explore-meta h3{font-family:var(--display);font-weight:400;font-size:23px;margin:8px 0 8px;}
+  .explore-meta p{margin:0;font-size:14px;color:var(--ink-60);}
+  .chosen-flag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--ember);color:#fff;padding:6px 12px;border-radius:100px;}
+
+  /* wordmark lockups */
+  .wm{display:flex;align-items:center;gap:18px;}
+  .wm .wm-mark{width:54px;height:65px;flex:none;}
+  .wm-text{display:flex;flex-direction:column;line-height:1;}
+  .wm-text .nm{font-family:var(--display);font-size:27px;letter-spacing:.01em;color:var(--ink);}
+  .wm-text .ds{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-60);margin-top:6px;}
+  .wm.on-teal .nm{color:var(--cream);}
+  .wm.on-teal .ds{color:rgba(251,247,239,.65);}
+
+  /* A-frame peak mark */
+  .peak{width:96px;height:96px;}
+  /* seal mark */
+  .seal{width:120px;height:120px;}
+
+  /* =========== PRIMARY LOGO =========== */
+  .primary-stage{background:var(--cream);border:1px solid var(--line);border-radius:26px;padding:80px;display:flex;justify-content:center;margin-bottom:30px;}
+  .lockup-h{display:flex;align-items:center;gap:30px;}
+  .lockup-h .lh-mark{width:104px;height:125px;flex:none;}
+  .lockup-h .nm{font-family:var(--display);font-size:54px;letter-spacing:.005em;line-height:.95;color:var(--ink);}
+  .lockup-h .ds{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.38em;text-transform:uppercase;color:var(--ember);margin-top:12px;}
+  .var-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .var-cell{border:1px solid var(--line);border-radius:20px;padding:46px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;min-height:230px;}
+  .var-cell.teal{background:var(--teal);border-color:transparent;}
+  .var-cell.ink{background:var(--ink);border-color:transparent;}
+  .var-cell .cap{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40);}
+  .var-cell.teal .cap,.var-cell.ink .cap{color:rgba(251,247,239,.5);}
+  /* stacked lockup */
+  .lockup-v{display:flex;flex-direction:column;align-items:center;gap:18px;}
+  .lockup-v .lv-mark{width:72px;height:86px;}
+  .lockup-v .nm{font-family:var(--display);font-size:30px;text-align:center;line-height:.95;}
+  .lockup-v .ds{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;margin-top:8px;}
+  .lockup-v.on-teal .nm{color:var(--cream);}
+  .lockup-v.on-teal .ds,.lockup-v.on-ink .ds{color:var(--saffron);}
+  .lockup-v.on-ink .nm{color:var(--cream);}
+
+  /* =========== CONSTRUCTION / CLEARSPACE =========== */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .clear-demo{background:#fff;border:1px solid var(--line);border-radius:22px;padding:50px;display:flex;justify-content:center;align-items:center;}
+  .clear-box{position:relative;padding:48px;}
+  .clear-box::before{content:"";position:absolute;inset:0;border:1px dashed var(--ember);border-radius:8px;}
+  .clear-box .grid-x{position:absolute;background:rgba(226,97,60,.16);}
+  .minsize-row{display:flex;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-top:10px;}
+  .ms-item{display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .ms-item .cap{font-size:12px;color:var(--ink-60);}
+  .dont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px;}
+  .dont-cell{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;}
+  .dont-art{height:150px;display:flex;align-items:center;justify-content:center;background:var(--sand);position:relative;overflow:hidden;}
+  .dont-cap{padding:14px 18px;display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--ink-60);border-top:1px solid var(--line);}
+  .x-badge{width:20px;height:20px;border-radius:50%;background:var(--carpet);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;flex:none;font-weight:700;}
+
+  /* =========== COLOR =========== */
+  .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:24px;}
+  .swatch{border-radius:18px;overflow:hidden;border:1px solid var(--line);}
+  .swatch .chip{height:150px;display:flex;align-items:flex-end;padding:16px;}
+  .swatch .chip .pct{font-family:var(--display);font-size:15px;}
+  .swatch .info{padding:16px 18px 18px;background:#fff;}
+  .swatch .info .nm{font-weight:700;font-size:14.5px;letter-spacing:.01em;}
+  .swatch .info .hex{font-size:13px;color:var(--ink-60);font-variant-numeric:tabular-nums;margin-top:2px;}
+  .swatch .info .use{font-size:12.5px;color:var(--ink-40);margin-top:8px;line-height:1.4;}
+  .grad-bar{height:96px;border-radius:18px;background:linear-gradient(90deg,#C2392A,#E2613C 45%,#F0B53C);display:flex;align-items:center;padding:0 28px;color:#fff;font-family:var(--display);font-size:20px;letter-spacing:.02em;}
+  .neutrals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);margin-top:20px;}
+  .neutral{padding:26px 18px;font-size:12.5px;}
+
+  /* =========== TYPE =========== */
+  .type-block{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line);align-items:baseline;}
+  .type-block .meta .fam{font-family:var(--display);font-size:22px;}
+  .type-block .meta .role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);font-weight:700;margin-top:6px;}
+  .type-block .meta .weights{font-size:13px;color:var(--ink-60);margin-top:10px;}
+  .specimen-serif{font-family:var(--display);font-size:64px;line-height:1;letter-spacing:-.01em;margin:0;}
+  .specimen-serif .small{display:block;font-size:18px;color:var(--ink-60);margin-top:18px;letter-spacing:.04em;}
+  .specimen-sans{font-family:var(--sans);}
+  .specimen-sans .big{font-size:40px;font-weight:700;line-height:1.1;letter-spacing:-.01em;}
+  .specimen-sans .glyphs{font-size:26px;color:var(--ink-60);margin-top:16px;letter-spacing:.02em;}
+  .scale-row{display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+  .scale-row > div{display:flex;align-items:baseline;gap:20px;padding:10px 0;border-bottom:1px solid var(--line);}
+  .scale-row .tag{width:130px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40);flex:none;}
+
+  /* =========== MOTIF =========== */
+  .pattern-band{height:300px;border-radius:24px;overflow:hidden;position:relative;background:var(--teal);}
+  .icon-row{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:18px;}
+  .icon-cell{aspect-ratio:1;border:1px solid var(--line);border-radius:18px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;}
+  .icon-cell span{font-size:12px;color:var(--ink-60);}
+  .icon-cell svg{width:46px;height:46px;}
+
+  /* =========== APPLICATIONS =========== */
+  .app-section{background:var(--teal);color:var(--cream);border-bottom:none;}
+  .app-section .eyebrow{color:var(--saffron);}
+  .app-section h2.sec,.app-section .lead{color:var(--cream);}
+  .app-section .lead{color:rgba(251,247,239,.7);}
+  .app-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:26px;margin-top:50px;}
+  .app-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(251,247,239,.55);margin-bottom:14px;}
+  .card{background:var(--cream);color:var(--ink);border-radius:20px;overflow:hidden;}
+
+  /* business card */
+  .bizcard{aspect-ratio:1.75;border-radius:16px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px rgba(0,0,0,.3);}
+  .bizcard.front{background:var(--teal);color:var(--cream);position:relative;overflow:hidden;}
+  .bizcard.back{background:var(--cream);color:var(--ink);}
+  .bizcard .bc-name{font-family:var(--display);font-size:26px;}
+  .bizcard .bc-ds{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--saffron);margin-top:6px;}
+  .bizcard .bc-contact{font-size:12px;line-height:1.7;}
+  .bizcard .bc-contact .role{color:var(--ember);font-weight:700;}
+  .bizcard .bc-contact b{font-weight:700;}
+
+  /* app icon */
+  .appicon{width:104px;height:104px;border-radius:24px;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#0E3B3C,#072829);box-shadow:0 16px 36px rgba(0,0,0,.3);}
+  .appicon.ember{background:linear-gradient(150deg,#E2613C,#C2392A);}
+  .appicon-row{display:flex;gap:22px;align-items:center;flex-wrap:wrap;}
+  .appicon-cap{font-size:12px;color:rgba(251,247,239,.55);margin-top:12px;}
+
+  /* instagram */
+  .ig{background:var(--cream);border-radius:18px;overflow:hidden;color:var(--ink);}
+  .ig-head{display:flex;align-items:center;gap:12px;padding:14px 16px;}
+  .ig-ava{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,#0E3B3C,#072829);display:flex;align-items:center;justify-content:center;flex:none;}
+  .ig-ava svg{width:24px;height:29px;}
+  .ig-handle{font-weight:700;font-size:13.5px;}
+  .ig-handle .sub{font-weight:400;color:var(--ink-60);font-size:12px;}
+  .ig-post{position:relative;aspect-ratio:1;background:var(--teal);}
+  .ig-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:24px;background:linear-gradient(180deg,rgba(7,40,41,.1),rgba(7,40,41,.78));z-index:2;pointer-events:none;}
+  .ig-overlay .top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .ig-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);font-weight:700;}
+  .ig-title{font-family:var(--display);font-size:34px;line-height:1.02;color:var(--cream);}
+  .ig-price{font-size:13px;color:rgba(251,247,239,.85);margin-top:10px;}
+  .ig-price b{font-family:var(--display);font-size:22px;color:var(--saffron);}
+  .ig-foot{display:flex;justify-content:space-between;align-items:center;}
+  .ig-badge{background:var(--ember);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-radius:100px;}
+
+  /* whatsapp */
+  .wa{background:#0b141a;border-radius:18px;overflow:hidden;}
+  .wa-head{background:#1f2c34;padding:14px 16px;display:flex;align-items:center;gap:12px;}
+  .wa-ava{width:40px;height:40px;border-radius:50%;background:linear-gradient(150deg,#0E3B3C,#072829);display:flex;align-items:center;justify-content:center;flex:none;}
+  .wa-ava svg{width:22px;height:26px;}
+  .wa-name{color:#fff;font-weight:700;font-size:14px;}
+  .wa-name .on{display:block;font-weight:400;font-size:11px;color:#8aa;}
+  .wa-body{padding:18px 14px;display:flex;flex-direction:column;gap:10px;min-height:150px;background-image:linear-gradient(rgba(11,20,26,.92),rgba(11,20,26,.92));}
+  .wa-bub{max-width:78%;padding:9px 13px;font-size:13px;border-radius:12px;line-height:1.45;}
+  .wa-in{background:#1f2c34;color:#e7f0ef;align-self:flex-start;border-top-left-radius:3px;}
+  .wa-out{background:#005c4b;color:#e7ffe9;align-self:flex-end;border-top-right-radius:3px;}
+  .wa-out .t{display:block;font-size:9px;color:#9fd8b8;text-align:right;margin-top:3px;}
+
+  /* web cta + trust bar */
+  .web-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .btn{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.01em;border-radius:100px;padding:15px 28px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;}
+  .btn-primary{background:var(--ember);color:#fff;}
+  .btn-wa{background:#25D366;color:#0b271a;}
+  .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(251,247,239,.4);}
+  .trust-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--cream);border-radius:18px;overflow:hidden;margin-top:26px;}
+  .trust-item{padding:26px 22px;text-align:center;border-right:1px solid var(--line);}
+  .trust-item:last-child{border-right:none;}
+  .trust-item .big{font-family:var(--display);font-size:30px;color:var(--teal);}
+  .trust-item .lbl{font-size:12px;color:var(--ink-60);margin-top:4px;letter-spacing:.02em;}
+
+  /* footer */
+  .foot{background:var(--teal-deep);color:rgba(251,247,239,.6);padding:70px 0;text-align:center;border-bottom:none;}
+  .foot .fmark{width:54px;height:65px;margin:0 auto 22px;}
+  .foot .fname{font-family:var(--display);font-size:24px;color:var(--cream);}
+  .foot .ftag{font-size:13px;letter-spacing:.06em;margin-top:10px;}
+  .foot .fmeta{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:30px;color:rgba(251,247,239,.4);}
+
+  .span-6{grid-column:span 6;}
+  .span-4{grid-column:span 4;}
+  .span-3{grid-column:span 3;}
+  .span-5{grid-column:span 5;}
+  .span-7{grid-column:span 7;}
+
+  @media(max-width:900px){
+    .wrap{padding:0 28px;}
+    section{padding:80px 0;}
+    .pillars,.explore-grid,.dont-grid,.swatch-grid,.icon-row{grid-template-columns:1fr 1fr;}
+    .two-col,.type-block{grid-template-columns:1fr;gap:30px;}
+    .var-grid{grid-template-columns:1fr;}
+    .app-grid > *{grid-column:1 / -1 !important;}
+    .neutrals{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== shared flame symbol ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="flameGrad" x1="0.15" y1="1" x2="0.85" y2="0">
+      <stop offset="0" stop-color="#C2392A"/>
+      <stop offset="0.45" stop-color="#E2613C"/>
+      <stop offset="1" stop-color="#F0B53C"/>
+    </linearGradient>
+    <symbol id="flame" viewBox="0 0 100 120">
+      <path class="fOuter" d="M50,116 C28,116 14,100 14,76 C14,58 26,52 33,39 C40,26 41,12 58,5 C53,21 62,28 67,43 C73,60 86,60 86,80 C86,102 70,116 50,116 Z"/>
+      <path class="fInner" d="M49,99 C39,99 33,91 33,81 C33,72 40,68 45,58 C49,66 56,71 59,80 C61,90 57,99 49,99 Z"/>
+    </symbol>
+    <pattern id="butaPat" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M52,84 C38,84 30,73 30,58 C30,47 38,43 43,33 C48,23 49,14 60,9 C56,20 64,25 67,35 C71,47 80,48 80,60 C80,75 68,84 56,84 Z" fill="none" stroke="rgba(240,181,60,0.22)" stroke-width="1.4"/>
+      <circle cx="55" cy="60" r="3" fill="rgba(226,97,60,0.4)"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- =========================== COVER =========================== -->
+<header class="cover" data-screen-label="Cover">
+  <svg class="cover-bg" viewBox="0 0 1180 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1180" height="900" fill="url(#butaPat)"/>
+  </svg>
+  <div class="wrap cover-top">
+    <span class="tag">Brand Guidelines</span>
+    <span class="tag">Version 1.0 — 2026</span>
+  </div>
+  <div class="wrap cover-mid">
+    <svg class="cover-mark"><use href="#flame"/></svg>
+    <div>
+      <h1>Azerbaijan<br>Travel Packages</h1>
+      <p class="sub">Your gateway to the Land of Fire.</p>
+    </div>
+  </div>
+  <div class="wrap cover-bottom">
+    <span>azerbaijantravelpackages.com</span>
+    <span class="big">The Land of Fire, made easy.</span>
+    <span>Brand Identity System</span>
+  </div>
+</header>
+
+<!-- =========================== ESSENCE =========================== -->
+<section id="essence">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">01</span>The Idea</p>
+    <p class="essence-statement">Azerbaijan is the <em>Land of Fire</em> — ancient flames, the Caspian shore, snow peaks and Silk-Road cities. Our brand carries one symbol: the <em>buta</em>, the national flame-paisley woven into every carpet. A single, confident mark for the trusted English-first gateway to it all.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pn">/01</div>
+        <h3>Trusted</h3>
+        <p>Verified operators, real reviews, a two-hour reply promise. Every signal says: book with confidence.</p>
+      </div>
+      <div class="pillar">
+        <div class="pn">/02</div>
+        <h3>Effortless</h3>
+        <p>English-first, mobile-first, WhatsApp-first. Visa guidance and curated itineraries, friction removed.</p>
+      </div>
+      <div class="pillar">
+        <div class="pn">/03</div>
+        <h3>Aspirational</h3>
+        <p>Honeymoon seafronts, first snow, fire temples. We sell the feeling of a place few have discovered.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== LOGO EXPLORATION =========================== -->
+<section id="exploration">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">02</span>Logo Directions</p>
+    <h2 class="sec">Three routes explored</h2>
+    <p class="lead">Each pairs an Azerbaijani symbol with the wordmark. We took <strong>The Buta Flame</strong> forward — it is the most ownable, scales to a favicon, and works in a single colour.</p>
+    <div class="explore-grid">
+
+      <div class="explore-card">
+        <div class="explore-art">
+          <svg style="width:96px;height:115px"><use href="#flame"/></svg>
+        </div>
+        <div class="explore-meta">
+          <div class="lbl">Direction A</div>
+          <h3>The Buta Flame</h3>
+          <p>The national paisley read as a living flame, with an inner ember. Organic, warm, unmistakably Azerbaijan.</p>
+          <span class="chosen-flag">★ Selected</span>
+        </div>
+      </div>
+
+      <div class="explore-card">
+        <div class="explore-art dark">
+          <!-- A-frame peak -->
+          <svg class="peak" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 20 L82 84" stroke="#F4ECDD" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M50 20 L18 84" stroke="#F4ECDD" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M33 64 L67 64" stroke="#F4ECDD" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M50,18 C46,10 47,4 55,0 C52,7 57,10 59,16 C61,22 56,26 50,24 C47,23 47,20 50,18 Z" fill="url(#flameGrad)"/>
+          </svg>
+        </div>
+        <div class="explore-meta">
+          <div class="lbl">Direction B</div>
+          <h3>The Summit Mark</h3>
+          <p>An “A” monogram built as a Caucasus peak, crowned with a small flame. Geometric and corporate.</p>
+        </div>
+      </div>
+
+      <div class="explore-card">
+        <div class="explore-art">
+          <!-- caspian sun seal -->
+          <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#0E3B3C" stroke-width="2"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#0E3B3C" stroke-width="1" stroke-dasharray="1 4"/>
+            <path d="M30 56 A20 20 0 0 1 70 56" fill="url(#flameGrad)"/>
+            <line x1="26" y1="63" x2="74" y2="63" stroke="#0E3B3C" stroke-width="2.4"/>
+            <path d="M28 70 q22 8 44 0" fill="none" stroke="#0E3B3C" stroke-width="2"/>
+            <path d="M31 76 q19 6 38 0" fill="none" stroke="#0E3B3C" stroke-width="1.6" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="explore-meta">
+          <div class="lbl">Direction C</div>
+          <h3>The Caspian Seal</h3>
+          <p>A travel-stamp roundel — sun rising over the Caspian. Classic and ornamental, but busy at small sizes.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================== PRIMARY LOGO =========================== -->
+<section id="primary">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">03</span>Primary Logo</p>
+    <h2 class="sec">The signature</h2>
+    <p class="lead">The horizontal lockup is the default. Mark and wordmark hold a fixed relationship — never redraw, restretch, or rearrange them.</p>
+    <div class="primary-stage">
+      <div class="lockup-h">
+        <svg class="lh-mark"><use href="#flame"/></svg>
+        <div>
+          <div class="nm">Azerbaijan</div>
+          <div class="ds">Travel Packages</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="var-grid">
+      <div class="var-cell">
+        <div class="lockup-v">
+          <svg class="lv-mark"><use href="#flame"/></svg>
+          <div>
+            <div class="nm">Azerbaijan</div>
+            <div class="ds" style="color:var(--ember)">Travel Packages</div>
+          </div>
+        </div>
+        <div class="cap">Stacked — square &amp; social formats</div>
+      </div>
+      <div class="var-cell teal">
+        <div class="lockup-v on-teal">
+          <svg class="lv-mark on-dark"><use href="#flame"/></svg>
+          <div>
+            <div class="nm">Azerbaijan</div>
+            <div class="ds">Travel Packages</div>
+          </div>
+        </div>
+        <div class="cap">Full colour on Caspian Teal</div>
+      </div>
+      <div class="var-cell">
+        <svg style="width:84px;height:100px" class="mono-teal"><use href="#flame"/></svg>
+        <div class="cap">Mono — Caspian Teal</div>
+      </div>
+      <div class="var-cell ink">
+        <div class="lockup-v on-ink">
+          <svg class="lv-mark reversed"><use href="#flame"/></svg>
+          <div>
+            <div class="nm">Azerbaijan</div>
+            <div class="ds">Travel Packages</div>
+          </div>
+        </div>
+        <div class="cap">Reversed — single colour knockout</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== CONSTRUCTION =========================== -->
+<section id="construction">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">04</span>Clear Space &amp; Sizing</p>
+    <div class="two-col">
+      <div>
+        <h2 class="sec" style="font-size:36px">Give it room</h2>
+        <p class="lead" style="font-size:17px">Keep clear space of at least the height of the inner ember on all sides. Nothing — type, edges, other logos — enters this zone.</p>
+        <div class="minsize-row">
+          <div class="ms-item">
+            <svg style="width:64px;height:77px"><use href="#flame"/></svg>
+            <div class="cap">App / favicon · 48px min</div>
+          </div>
+          <div class="ms-item">
+            <div class="lockup-h" style="gap:12px">
+              <svg style="width:34px;height:41px"><use href="#flame"/></svg>
+              <div><div style="font-family:var(--display);font-size:18px">Azerbaijan</div><div style="font-size:7px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ember)">Travel Packages</div></div>
+            </div>
+            <div class="cap">Lockup · 120px wide min</div>
+          </div>
+        </div>
+      </div>
+      <div class="clear-demo">
+        <div class="clear-box" id="clearbox">
+          <svg style="width:96px;height:115px;display:block"><use href="#flame"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="sec" style="font-size:30px;margin-top:90px">Misuse</h2>
+    <div class="dont-grid">
+      <div class="dont-cell">
+        <div class="dont-art"><svg style="width:64px;height:110px;transform:scaleX(1.7)"><use href="#flame"/></svg></div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t stretch or distort</div>
+      </div>
+      <div class="dont-cell">
+        <div class="dont-art" style="background:#7a4cc8"><svg style="width:70px;height:84px" class="mono-ink"><use href="#flame"/></svg></div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t use off-brand colours</div>
+      </div>
+      <div class="dont-cell">
+        <div class="dont-art"><svg style="width:70px;height:84px;transform:rotate(24deg)"><use href="#flame"/></svg></div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t rotate or tilt</div>
+      </div>
+      <div class="dont-cell">
+        <div class="dont-art" style="background:linear-gradient(90deg,#444,#999)"><svg style="width:70px;height:84px"><use href="#flame"/></svg></div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t place on busy / low-contrast grounds</div>
+      </div>
+      <div class="dont-cell">
+        <div class="dont-art"><svg style="width:70px;height:84px;filter:drop-shadow(3px 5px 3px rgba(0,0,0,.5))"><use href="#flame"/></svg></div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t add shadows or effects</div>
+      </div>
+      <div class="dont-cell">
+        <div class="dont-art">
+          <div class="lockup-v" style="gap:6px"><svg style="width:40px;height:48px"><use href="#flame"/></svg><div style="font-family:'Comic Sans MS',cursive;font-size:16px;font-weight:700">Azerbaijan</div></div>
+        </div>
+        <div class="dont-cap"><span class="x-badge">✕</span> Don’t substitute the typeface</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== COLOR =========================== -->
+<section id="color">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">05</span>Colour</p>
+    <h2 class="sec">Caspian dusk &amp; living flame</h2>
+    <p class="lead">Deep Caspian teal grounds the brand; the flame gradient carries energy and every call-to-action. Sand and cream keep it premium and breathable.</p>
+
+    <div class="grad-bar" style="margin:40px 0 28px">The Flame Gradient — reserved for CTAs, highlights &amp; the mark</div>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip" style="background:#0E3B3C;color:#fff"><span class="pct">Primary</span></div>
+        <div class="info"><div class="nm">Caspian Teal</div><div class="hex">#0E3B3C · C84 M51 Y52 K48</div><div class="use">Backgrounds, headers, brand anchor.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#E2613C;color:#fff"><span class="pct">Accent</span></div>
+        <div class="info"><div class="nm">Ember</div><div class="hex">#E2613C · C8 M73 Y76 K1</div><div class="use">CTAs, links, the flame’s heart.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#F0B53C;color:#3a2a00"><span class="pct">Accent</span></div>
+        <div class="info"><div class="nm">Saffron</div><div class="hex">#F0B53C · C6 M30 Y82 K0</div><div class="use">Highlights, ratings, eyebrows on dark.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:#B5392E;color:#fff"><span class="pct">Support</span></div>
+        <div class="info"><div class="nm">Carpet Red</div><div class="hex">#B5392E · C22 M86 Y86 K12</div><div class="use">Sparingly — alerts, deep accents.</div></div>
+      </div>
+    </div>
+
+    <div class="neutrals">
+      <div class="neutral" style="background:#FBF7EF;color:#221E1A"><b>Cream</b><br>#FBF7EF<br><span style="color:var(--ink-60)">Default surface</span></div>
+      <div class="neutral" style="background:#F4ECDD;color:#221E1A"><b>Sand</b><br>#F4ECDD<br><span style="color:var(--ink-60)">Cards, panels</span></div>
+      <div class="neutral" style="background:#221E1A;color:#FBF7EF"><b>Ink</b><br>#221E1A<br><span style="color:rgba(251,247,239,.6)">Body text</span></div>
+      <div class="neutral" style="background:#072829;color:#FBF7EF"><b>Midnight</b><br>#072829<br><span style="color:rgba(251,247,239,.6)">Footer, depth</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== TYPOGRAPHY =========================== -->
+<section id="type">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">06</span>Typography</p>
+    <h2 class="sec">Classical meets clear</h2>
+    <p class="lead">Two families, locked. Marcellus brings timeless, Silk-Road elegance to headlines and the wordmark. Hanken Grotesk keeps everything readable and modern.</p>
+
+    <div class="type-block">
+      <div class="meta">
+        <div class="fam">Marcellus</div>
+        <div class="role">Display · Wordmark</div>
+        <div class="weights">Regular 400</div>
+      </div>
+      <div>
+        <p class="specimen-serif">Land of Fire<span class="small">ABCDEFGHIJKLM · abcdefghijklm · 1234567890</span></p>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="meta">
+        <div class="fam specimen-sans" style="font-family:var(--sans);font-weight:800">Hanken Grotesk</div>
+        <div class="role">Body · Interface</div>
+        <div class="weights">Light 300 · Regular 400 · Semibold 600 · Bold 700</div>
+      </div>
+      <div class="specimen-sans">
+        <div class="big">Curated tours, visa help &amp; honeymoon escapes.</div>
+        <div class="glyphs">ABCDEFGHIJKLMabcdefghijklm 1234567890 &amp;?!$</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="meta">
+        <div class="fam">Type scale</div>
+        <div class="role">Hierarchy</div>
+      </div>
+      <div class="scale-row">
+        <div><span class="tag">Display / H1</span><span style="font-family:var(--display);font-size:34px">Explore Azerbaijan</span></div>
+        <div><span class="tag">Heading / H2</span><span style="font-family:var(--display);font-size:25px">Weekend Baku Escape</span></div>
+        <div><span class="tag">Body</span><span style="font-size:17px">A content-rich, mobile-first travel platform.</span></div>
+        <div><span class="tag">Eyebrow</span><span style="font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember)">Honeymoon Packages</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== MOTIF =========================== -->
+<section id="motif">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">07</span>Pattern &amp; Icons</p>
+    <h2 class="sec">The buta, repeated</h2>
+    <p class="lead">The buta paisley becomes a quiet background texture for headers, footers and packaging — never loud, always grounding the page in carpet heritage.</p>
+    <div class="pattern-band" style="margin-top:34px">
+      <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 600 300" aria-hidden="true">
+        <rect width="600" height="300" fill="url(#butaPat)"/>
+      </svg>
+    </div>
+
+    <div class="icon-row">
+      <div class="icon-cell">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c-4 6 2 9 0 14"/><path d="M24 42c8 0 14-6 14-15 0-6-3-9-6-14-1 5-4 6-4 11"/><path d="M24 42c-8 0-14-6-14-15 0-5 4-7 8-13"/></svg>
+        <span>Flame / Fire</span>
+      </div>
+      <div class="icon-cell">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M6 38c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><circle cx="24" cy="14" r="6"/></svg>
+        <span>Caspian Sea</span>
+      </div>
+      <div class="icon-cell">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40l12-22 8 12 5-8 11 18z"/><circle cx="34" cy="13" r="4"/></svg>
+        <span>Mountains</span>
+      </div>
+      <div class="icon-cell">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4l4 14h14l-11 9 4 14-11-9-11 9 4-14-11-9h14z"/></svg>
+        <span>Heritage</span>
+      </div>
+      <div class="icon-cell">
+        <svg viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s14-10 14-22a14 14 0 1 0-28 0c0 12 14 22 14 22z"/><circle cx="24" cy="20" r="5"/></svg>
+        <span>Destination</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== APPLICATIONS =========================== -->
+<section id="applications" class="app-section">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">08</span>In the World</p>
+    <h2 class="sec">Applications</h2>
+    <p class="lead">The system across the touchpoints that matter most for this business — WhatsApp, Instagram, the app icon and the booking page.</p>
+
+    <div class="app-grid">
+      <!-- business cards -->
+      <div class="span-7">
+        <div class="app-label">Business card · 90 × 51mm</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="bizcard front">
+            <svg class="cover-bg" viewBox="0 0 300 170" preserveAspectRatio="xMidYMid slice" style="opacity:.5"><rect width="300" height="170" fill="url(#butaPat)"/></svg>
+            <div style="position:relative;z-index:2"><svg style="width:40px;height:48px" class="on-dark"><use href="#flame"/></svg></div>
+            <div style="position:relative;z-index:2">
+              <div class="bc-name">Azerbaijan</div>
+              <div class="bc-ds">Travel Packages</div>
+            </div>
+          </div>
+          <div class="bizcard back">
+            <div>
+              <div style="font-family:var(--display);font-size:19px">Aysel Mammadova</div>
+              <div class="bc-contact"><span class="role">Founder &amp; Travel Curator</span></div>
+            </div>
+            <div class="bc-contact">
+              <b>WhatsApp</b> +994 00 000 00 00<br>
+              hello@azerbaijantravelpackages.com<br>
+              azerbaijantravelpackages.com
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- app icon -->
+      <div class="span-5">
+        <div class="app-label">App icon &amp; favicon</div>
+        <div class="card" style="padding:34px;background:var(--sand)">
+          <div class="appicon-row">
+            <div>
+              <div class="appicon"><svg style="width:54px;height:65px" class="on-dark" aria-hidden="true"><use href="#flame"/></svg></div>
+            </div>
+            <div>
+              <div class="appicon ember"><svg style="width:54px;height:65px" aria-hidden="true"><use href="#flame" style="--fo:#fff;--fi:transparent"/></svg></div>
+            </div>
+            <div>
+              <div class="appicon" style="background:var(--cream);border:1px solid var(--line)"><svg style="width:54px;height:65px"><use href="#flame"/></svg></div>
+            </div>
+          </div>
+          <div style="font-size:13px;color:var(--ink-60);margin-top:18px;line-height:1.5">The mark sits centred with generous padding. Teal is the default; the ember tile suits notification badges and the WhatsApp catalogue.</div>
+        </div>
+      </div>
+
+      <!-- whatsapp -->
+      <div class="span-4">
+        <div class="app-label">WhatsApp Business</div>
+        <div class="wa">
+          <div class="wa-head">
+            <div class="wa-ava"><svg class="on-dark" aria-hidden="true"><use href="#flame"/></svg></div>
+            <div class="wa-name">Azerbaijan Travel Packages<span class="on">online</span></div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-bub wa-in">Salam! 👋 Planning a trip to Baku? Tell us your travel dates &amp; group size for a free custom quote.</div>
+            <div class="wa-bub wa-out">5 nights, 2 of us, July honeymoon 🙂<span class="t">9:24 ✓✓</span></div>
+            <div class="wa-bub wa-in">Perfect — our Honeymoon Package from <b>$1,299</b>/couple is ideal. Sending the itinerary now.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- instagram -->
+      <div class="span-4">
+        <div class="app-label">Instagram</div>
+        <div class="ig">
+          <div class="ig-head">
+            <div class="ig-ava"><svg class="on-dark" aria-hidden="true"><use href="#flame"/></svg></div>
+            <div class="ig-handle">azerbaijantravelpackages<span class="sub" style="display:block">Land of Fire · Halal ✓ · Visa help</span></div>
+          </div>
+          <div class="ig-post">
+            <image-slot id="ig-photo" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" placeholder="Drop a Baku / Caspian photo"></image-slot>
+            <div class="ig-overlay">
+              <div class="top">
+                <span class="ig-kicker">Weekend Escape</span>
+                <svg style="width:30px;height:36px" class="on-dark" aria-hidden="true"><use href="#flame"/></svg>
+              </div>
+              <div>
+                <div class="ig-title">Baku in<br>48 hours</div>
+                <div class="ig-price">From <b>$349</b> / person</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- web cta -->
+      <div class="span-4">
+        <div class="app-label">Website · CTAs &amp; trust bar</div>
+        <div class="card" style="padding:30px;background:var(--cream)">
+          <div style="font-family:var(--display);font-size:24px;color:var(--ink);line-height:1.15;margin-bottom:6px">Explore Azerbaijan</div>
+          <div style="font-size:14px;color:var(--ink-60);margin-bottom:20px">Packages starting from $349.</div>
+          <div class="web-cta" style="margin-bottom:6px">
+            <button class="btn btn-primary">Get Free Quote</button>
+            <button class="btn btn-wa">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="#0b271a" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-2.7 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3l-.6-.3s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.7-.3-1.4-.6-2.2-1.5-.3-.4-.6-.8-.8-1.1-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.3-.5v-.4c0-.1-.5-1.3-.7-1.8-.2-.4-.4-.4-.5-.4z"/></svg>
+              WhatsApp Us
+            </button>
+          </div>
+          <div class="trust-bar">
+            <div class="trust-item"><div class="big">500+</div><div class="lbl">Travellers sent</div></div>
+            <div class="trust-item"><div class="big">4.8★</div><div class="lbl">Avg. rating</div></div>
+            <div class="trust-item"><div class="big">24/7</div><div class="lbl">WhatsApp</div></div>
+            <div class="trust-item"><div class="big">95+</div><div class="lbl">Visa-free</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="foot">
+  <svg class="fmark light-cream"><use href="#flame"/></svg>
+  <div class="fname">Azerbaijan Travel Packages</div>
+  <div class="ftag">Your gateway to the Land of Fire.</div>
+  <div class="fmeta">Brand Guidelines v1.0 · 2026 · azerbaijantravelpackages.com</div>
+</footer>
+
+<script>
+  // place clear-space grid markers around the flame in the construction demo
+  (function(){
+    var box = document.getElementById('clearbox');
+    if(!box) return;
+    [['top','0','left','0','100%','1px'],['bottom','0','left','0','100%','1px'],
+     ['left','0','top','0','1px','100%'],['right','0','top','0','1px','100%']]
+     .forEach(function(s){
+       var d=document.createElement('div'); d.className='grid-x';
+       d.style[s[0]]=s[1]; d.style[s[2]]=s[3]; d.style.width=s[4]; d.style.height=s[5];
+       box.appendChild(d);
+     });
+  })();
+</script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#0E3B3C"/>
+    <path d="M50,82 C38,82 30,73 30,60 C30,50 37,46 41,38 C46,29 47,20 56,15 C52,25 60,30 63,40 C68,52 76,53 76,64 C76,76 64,82 53,82 Z" fill="#E2613C"/>
+  </svg>
+</template>
+
+</body>
+</html>
